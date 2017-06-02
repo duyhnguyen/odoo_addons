@@ -14,6 +14,7 @@
                                 <field name="donor1_name"/>
                                 <field name="donor1_sex"/>
                                 <field name="donor1_dob"/>
+                                <field name="donor1_nationality"/>
                                 <field name="donor1_relationship"/>
                                 <field name="donor1_sample_type"/>
                                 <field name="donor1_sample_date"/>
@@ -34,6 +35,7 @@
                                 <field name="donor2_name"/>
                                 <field name="donor2_sex"/>
                                 <field name="donor2_dob"/>
+                                <field name="donor2_nationality"/>
                                 <field name="donor2_relationship"/>
                                 <field name="donor2_sample_type"/>
                                 <field name="donor2_sample_date"/>
@@ -54,6 +56,7 @@
                                 <field name="donor3_name"/>
                                 <field name="donor3_sex"/>
                                 <field name="donor3_dob"/>
+                                <field name="donor3_nationality"/>
                                 <field name="donor3_relationship"/>
                                 <field name="donor3_sample_type"/>
                                 <field name="donor3_sample_date"/>

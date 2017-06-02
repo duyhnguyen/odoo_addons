@@ -9,7 +9,8 @@ class sale_extended_fields(models.Model):
     donor1_name = fields.Char(string='Họ và tên')
     donor1_sex = fields.Selection([('male', 'Nam'), ('female', 'Nữ')], string='Giới tính')
     donor1_dob = fields.Date(string='Ngày sinh')
-    donor1_nationality = fields.Many2one('res.country', string='Quốc tịch', default='Vietnam')
+    donor1_nationality = fields.Many2one('res.country', string='Quốc tịch',
+                                  default=lambda self: self.env['res.country'].search([('name', '=', 'Vietnam')]))
     donor1_relationship = fields.Char(string='Quan hệ')
     donor1_sample_type = fields.Char(string='Loại mẫu')
     donor1_sample_date = fields.Date(string='Ngày thu')
@@ -25,6 +26,9 @@ class sale_extended_fields(models.Model):
     donor2_name = fields.Char(string='Họ và tên')
     donor2_sex = fields.Selection([('male', 'Nam'), ('female', 'Nữ')], string='Giới tính')
     donor2_dob = fields.Date(string='Ngày sinh')
+    donor2_nationality = fields.Many2one('res.country', string='Quốc tịch',
+                                         default=lambda self: self.env['res.country'].search(
+                                             [('name', '=', 'Vietnam')]))
     donor2_relationship = fields.Char(string='Quan hệ')
     donor2_sample_type = fields.Char(string='Loại mẫu')
     donor2_sample_date = fields.Date(string='Ngày thu')
@@ -40,6 +44,9 @@ class sale_extended_fields(models.Model):
     donor3_name = fields.Char(string='Họ và tên')
     donor3_sex = fields.Selection([('male', 'Nam'), ('female', 'Nữ')], string='Giới tính')
     donor3_dob = fields.Date(string='Ngày sinh')
+    donor3_nationality = fields.Many2one('res.country', string='Quốc tịch',
+                                         default=lambda self: self.env['res.country'].search(
+                                             [('name', '=', 'Vietnam')]))
     donor3_relationship = fields.Char(string='Quan hệ')
     donor3_sample_type = fields.Char(string='Loại mẫu')
     donor3_sample_date = fields.Date(string='Ngày thu')
