@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+
+        <record id="personal_information" model="ir.ui.view">
+            <field name="name">Personal information page for contacts form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//page[1]" position="before">
+                        <page name="personal_information_page"
+                              string="Personal Information"
+                              attrs="{'invisible': [('is_company','=',True)]}">
+                            <group name="personal_information_group">
+                            <field name="birthdate"/>
+                            <field name="gender"/>
+                            <field name="nationality"/>
+                            <field name="report_receive_via" required="1" widget="radio" options="{'horizontal': true}"/>
+                            <field name="password"/>
+                            </group>
+
+
+                        </page>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>

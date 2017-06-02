@@ -1,0 +1,79 @@
+<odoo>
+    <data>
+
+        <!--Inherit the sale order form view-->
+        <record id="view_sale_order_custom" model="ir.ui.view">
+            <field name="name">sale.order.custom.form.inherited</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[1]" position="after">
+                    <page string="Thông tin người cho mẫu">
+                        <group string="Người Cho Mẫu 1" name="donor1">
+                            <group>
+                                <field name="donor1_name"/>
+                                <field name="donor1_sex"/>
+                                <field name="donor1_dob"/>
+                                <field name="donor1_relationship"/>
+                                <field name="donor1_sample_type"/>
+                                <field name="donor1_sample_date"/>
+                                <field name="donor1_sample_collector"/>
+                            </group>
+                            <group>
+                                <field name="donor1_id_type"/>
+                                <field name="donor1_id_issue"/>
+                                <field name="donor1_id_no"/>
+                                <field name="donor1_id_exp"/>
+                                <field name="donor1_id_issue_place"/>
+                                <field name="donor1_guardian"/>
+                                <field name="donor1_guardian_rel"/>
+                            </group>
+                        </group>
+                        <group string="Người Cho Mẫu 2" name="donor2">
+                            <group>
+                                <field name="donor2_name"/>
+                                <field name="donor2_sex"/>
+                                <field name="donor2_dob"/>
+                                <field name="donor2_relationship"/>
+                                <field name="donor2_sample_type"/>
+                                <field name="donor2_sample_date"/>
+                                <field name="donor2_sample_collector"/>
+                            </group>
+                            <group>
+                                <field name="donor2_id_type"/>
+                                <field name="donor2_id_issue"/>
+                                <field name="donor2_id_no"/>
+                                <field name="donor2_id_exp"/>
+                                <field name="donor2_id_issue_place"/>
+                                <field name="donor2_guardian"/>
+                                <field name="donor2_guardian_rel"/>
+                            </group>
+                        </group>
+                        <group string="Người Cho Mẫu 3" name="donor3">
+                            <group>
+                                <field name="donor3_name"/>
+                                <field name="donor3_sex"/>
+                                <field name="donor3_dob"/>
+                                <field name="donor3_relationship"/>
+                                <field name="donor3_sample_type"/>
+                                <field name="donor3_sample_date"/>
+                                <field name="donor3_sample_collector"/>
+                            </group>
+                            <group>
+                                <field name="donor3_id_type"/>
+                                <field name="donor3_id_issue"/>
+                                <field name="donor3_id_no"/>
+                                <field name="donor3_id_exp"/>
+                                <field name="donor3_id_issue_place"/>
+                                <field name="donor3_guardian"/>
+                                <field name="donor3_guardian_rel"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
