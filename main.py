@@ -100,7 +100,7 @@ class EscposDriver(Thread):
     
     def get_escpos_printer(self):
         self.set_status('connected', 'Connected')
-        return File('/tmp/printer')
+        return File('/home/bitnami/apps/odoo/lib/odoo-10.0.post20170828-py2.7.egg/odoo/tmp/printer')
         printers = self.connected_usb_devices()
         if len(printers) > 0:
             self.set_status('connected', 'Connected to ' + printers[0]['name'])
